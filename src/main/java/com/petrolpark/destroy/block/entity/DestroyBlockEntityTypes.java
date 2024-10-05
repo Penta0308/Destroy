@@ -77,6 +77,11 @@ public class DestroyBlockEntityTypes {
         .renderer(() -> CoolerRenderer::new)
         .register();
 
+    public static final BlockEntityEntry<CreativePumpBlockEntity> CREATIVE_PUMP = REGISTRATE
+        .blockEntity("creative_pump", CreativePumpBlockEntity::new)
+        .validBlocks(DestroyBlocks.CREATIVE_PUMP)
+        .register();
+
     public static final BlockEntityEntry<CustomExplosiveMixBlockEntity> CUSTOM_EXPLOSIVE_MIX = REGISTRATE
         .blockEntity("custom_explosive_mix", CustomExplosiveMixBlockEntity::new)
         .validBlocks(DestroyBlocks.CUSTOM_EXPLOSIVE_MIX)

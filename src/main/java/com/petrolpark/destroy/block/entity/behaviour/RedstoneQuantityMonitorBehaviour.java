@@ -50,7 +50,7 @@ public class RedstoneQuantityMonitorBehaviour extends BlockEntityBehaviour {
     };
 
     public void update() {
-        getWorld().blockUpdated(getPos(), getWorld().getBlockState(getPos()).getBlock());
+        getWorld().updateNeighborsAt(getPos(), blockEntity.getBlockState().getBlock());
         //TODO update adjacent positions?
     };
 

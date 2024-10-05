@@ -451,6 +451,7 @@ public class VatSideBlockEntity extends CopycatBlockEntity implements IHaveLabGo
         };
         boolean nextToAir = getLevel().getBlockState(neighborPos).isAir(); // It thinks getLevel() might be null (it's not)
         
+        DisplayType oldDisplayType = getDisplayType();
         if (nextToPipe) { 
             setDisplayType(DisplayType.PIPE);
         } else if (!nextToAir) {
@@ -478,8 +479,10 @@ public class VatSideBlockEntity extends CopycatBlockEntity implements IHaveLabGo
             };
         };
 
-        redstoneMonitor.update();
-        invalidateRenderBoundingBox();
+        if (getDisplayType() != oldDisplayType) {
+            redstoneMonitor.update();
+            invalidateRenderBoundingBox();
+        };
     };
 
     @Override

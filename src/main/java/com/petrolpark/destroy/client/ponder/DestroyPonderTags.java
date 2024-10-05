@@ -45,6 +45,7 @@ public class DestroyPonderTags {
             .add(DestroyBlocks.CATALYTIC_CONVERTER)
             .add(DestroyBlocks.CENTRIFUGE)
             .add(DestroyBlocks.COOLER)
+            .add(DestroyBlocks.CREATIVE_PUMP)
             .add(DestroyBlocks.CUSTOM_EXPLOSIVE_MIX)
             .add(DestroyBlocks.DYNAMO)
             .add(DestroyBlocks.EXTRUSION_DIE)
@@ -67,6 +68,7 @@ public class DestroyPonderTags {
             .add(DestroyBlocks.BUBBLE_CAP)
             .add(DestroyBlocks.CATALYTIC_CONVERTER)
             .add(DestroyBlocks.CENTRIFUGE)
+            .add(DestroyBlocks.CREATIVE_PUMP)
             .add(DestroyBlocks.PUMPJACK)
             .add(DestroyBlocks.SIPHON)
             .add(DestroyBlocks.TREE_TAP)
@@ -102,6 +104,10 @@ public class DestroyPonderTags {
 
         PonderRegistry.TAGS.forTag(AllPonderTags.CONTRAPTION_ACTOR)
             .add(DestroyBlocks.EXTRUSION_DIE)
+        ;
+
+        PonderRegistry.TAGS.forTag(AllPonderTags.CREATIVE)
+            .add(DestroyBlocks.CREATIVE_PUMP)
         ;
     };
 

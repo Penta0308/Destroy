@@ -53,6 +53,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -144,6 +145,18 @@ public class DestroyBlocks {
         ).transform(TagGen.pickaxeOnly())
         .item()
         .transform(customItemModel())
+        .register();
+
+    public static final BlockEntry<CreativePumpBlock> CREATIVE_PUMP = REGISTRATE.block("creative_pump", CreativePumpBlock::new)
+        .initialProperties(AllBlocks.MECHANICAL_PUMP)
+        .properties(p -> p
+            .mapColor(MapColor.COLOR_PURPLE)
+            .forceSolidOn()
+        ).transform(TagGen.pickaxeOnly())
+        .item()
+        .properties(p -> p
+            .rarity(Rarity.EPIC)
+        ).build()
         .register();
 
     public static final BlockEntry<CustomExplosiveMixBlock> CUSTOM_EXPLOSIVE_MIX = REGISTRATE.block("custom_explosive_mix", CustomExplosiveMixBlock::new)

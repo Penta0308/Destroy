@@ -166,6 +166,8 @@
     "block.destroy.cordite.tooltip.condition1": "When Exploded",
     "block.destroy.cordite.tooltip.behaviour1": "_Evaporates_ liquids, doesn't drop items and does _minimal damage_ to mobs.",
     "block.destroy.cordite_block": "Cordite Block",
+    "block.destroy.creative_pump": "Creative Pump",
+    "block.destroy.creative_pump.speed": "Pumping Speed",
     "block.destroy.custom_explosive_mix": "Mixed Explosive",
     "block.destroy.custom_explosive_mix_charge": "Mixed Charge",
     "block.destroy.custom_explosive_mix_shell": "Mixed Shell",
