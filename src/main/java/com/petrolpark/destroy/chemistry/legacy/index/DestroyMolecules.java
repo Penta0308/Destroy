@@ -290,6 +290,16 @@ public final class DestroyMolecules {
         .tag(Tags.CARCINOGEN)
         .build(),
 
+    CHLOROMETHANE = builder()
+        .id("chloromethane")
+        .structure(LegacyMolecularStructure.deserialize("destroy:linear:CCl"))
+        .boilingPoint(-23.8f)
+        .density(1003f)
+        .molarHeatCapacity(81.2f)
+        .tag(Tags.ACUTELY_TOXIC)
+        .tag(Tags.REFRIGERANT)
+        .build(),
+
     CHLOROFORM = builder()
         .id("chloroform")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:ClC(Cl)Cl"))
@@ -431,6 +441,17 @@ public final class DestroyMolecules {
         .tag(Tags.GREENHOUSE)
         .tag(Tags.OZONE_DEPLETER)
         .tag(Tags.REFRIGERANT)
+        .build(),
+
+    DICHLOROMETHANE = builder()
+        .id("dichloromethane")
+        .structure(LegacyMolecularStructure.deserialize("destroy:linear:ClCCl"))
+        .boilingPoint(39.6f)
+        .density(1326.6f)
+        .molarHeatCapacity(81.2f)
+        .tag(Tags.ACUTELY_TOXIC)
+        .tag(Tags.CARCINOGEN)
+        .tag(Tags.SOLVENT)
         .build(),
 
     DICHROMATE = builder()
@@ -880,6 +901,15 @@ public final class DestroyMolecules {
         .tag(Tags.ACUTELY_TOXIC)
         .tag(Tags.SMOG)
         .tag(Tags.SOLVENT)
+        .build(),
+
+    METHYL_METHACRYLATE = builder()
+        .id("methyl_methacrylate")
+        .structure(LegacyMolecularStructure.deserialize("destroy:linear:CC(=C)C(=O)OC"))
+        .boilingPoint(101f)
+        .density(940f)
+        .molarHeatCapacity(191f)
+        .tag(Tags.SMOG)
         .build(),
 
     METHYL_SALICYLATE = builder()

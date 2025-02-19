@@ -3,7 +3,7 @@
     "ingredients": [
       {
         "mixtureFluidWithMolecule": "destroy:mixture",
-        "amount": 100,
+        "amount": 2,
         "molecule": "destroy:glycerol",
         "concentration": 1.0
       },
@@ -12,10 +12,10 @@
         "amount": 200
       },
       {
-        "tag": "destroy:explosive/primary"
+        "tag": "destroy:explosives/primary"
       },
       {
-        "tag": "destroy:explosive/secondary"
+        "tag": "destroy:explosives/secondary"
       }
     ],
     "results": [

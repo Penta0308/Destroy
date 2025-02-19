@@ -148,6 +148,15 @@ public class DestroyReactions {
         .reversible()
         .build(),
 
+    BOROHYDRIDE_IODINE_OXIDATION = builder() //TODO replace with generic redox
+        .id("borohydride_iodine_oxidation")
+        .addReactant(DestroyMolecules.BOROHYDRIDE, 2)
+        .addReactant(DestroyMolecules.IODINE)
+        .addProduct(DestroyMolecules.DIBORANE)
+        .addProduct(DestroyMolecules.IODIDE, 2)
+        .addProduct(DestroyMolecules.HYDROGEN)
+        .build(),
+
     BROWN_SCHLESINGER_PROCESS = builder()
         .id("brown_schlesinger_process")
         .addReactant(DestroyMolecules.TRIMETHYL_BORATE)
@@ -666,6 +675,13 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.ACETIC_ACID)
         .build(),
 
+    METHYL_METHACRYLATE_POLYMERIZATION = builder()
+        .id("methyl_methacrylate_polymerization")
+        .addReactant(DestroyMolecules.METHYL_METHACRYLATE)
+        .addCatalyst(DestroyMolecules.AIBN, 0)
+        .withResult(3f, PrecipitateReactionResult.of(DestroyItems.POLYMETHYL_METHACRYLATE::asStack))
+        .build(),
+
     NAUGHTY_REACTION = builder()
         .id("naughty_reaction")
         .addReactant(DestroyMolecules.PHENYLACETONE)
@@ -1014,6 +1030,48 @@ public class DestroyReactions {
         .addSimpleItemReactant(AllItems.CRUSHED_ZINC::get, 15f)
         .addProduct(DestroyMolecules.HYDROGEN)
         .addProduct(DestroyMolecules.ZINC_ION)
+        .build(),
+    
+
+    // Methane chlorinations
+    METHANE_CHLORINATION = builder()
+        .id("methane_uv_chlorination")
+        .addReactant(DestroyMolecules.METHANE)
+        .addReactant(DestroyMolecules.CHLORINE)
+        .requireUV()
+        .addProduct(DestroyMolecules.CHLOROMETHANE)
+        .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
+        .activationEnergy(22.5f)
+        .build(),
+
+    CHLOROMETHANE_CHLORINATION = builder()
+        .id("chloromethane_uv_chlorination")
+        .addReactant(DestroyMolecules.CHLOROMETHANE)
+        .addReactant(DestroyMolecules.CHLORINE)
+        .requireUV()
+        .addProduct(DestroyMolecules.DICHLOROMETHANE)
+        .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
+        .activationEnergy(25f)
+        .build(),
+
+    DICHLOROMETHANE_CHLORINATION = builder()
+        .id("dichloromethane_uv_chlorination")
+        .addReactant(DestroyMolecules.DICHLOROMETHANE)
+        .addReactant(DestroyMolecules.CHLORINE)
+        .requireUV()
+        .addProduct(DestroyMolecules.CHLOROFORM)
+        .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
+        .activationEnergy(27.5f)
+        .build(),
+
+    CHLOROFORM_CHLORINATION = builder()
+        .id("chloroform_uv_chlorination")
+        .addReactant(DestroyMolecules.CHLOROFORM)
+        .addReactant(DestroyMolecules.CHLORINE)
+        .requireUV()
+        .addProduct(DestroyMolecules.CARBON_TETRACHLORIDE)
+        .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
+        .activationEnergy(30f)
         .build();
 
     // Acids
